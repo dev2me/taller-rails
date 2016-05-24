@@ -1,28 +1,37 @@
-== README
+# Laboratorio de Ecotechnologic
+# Instructor: Jesús Rosas Ramírez
+Blog funcional con Ruby On Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TEMARIO:
+- Analizando MVC
+- Estructura de una aplicación en Ruby On Rails
+- ERB y assets
+- Models, manejo de base de datos y migraciones
+- Controllers
+- Layouts
+- Rutas y su comportamiento, analisis del HTTP
+- Enviar Datos al controlador
+- Validaciones con helpers de Rails sobre el modelo
+- Introducción al Active Record
+- Strong Params
+- Partials Views
+- Autenticación de usuarios con devise 
+- Relacion Uno a Varios 
+- Manejo de Callbacks
+- Scaffold y generador
+- Nested Resources 
+- AJAX con formularios remotos
+- Implementación de JSON con JBuilder
+- Subir Archivos
+- Relación Varios a Varios
+- Concerns
+- Creación de una Máquina de estados
+- Scopes
+- Paginación
+- Markup editor
+- Render collections
+- Application Helper
+- Enviar Mails
+- Avatars con gravatar
+- Ambientes de Producción y deploy del blog en Heroku
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

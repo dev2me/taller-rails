@@ -22,10 +22,10 @@ class ArticlesController < ApplicationController
 	end
 	def destroy
 		@article = Article.find(params[:id])
-		@article.destroy
+		@article.destroy #Destroy elimina el objeto de la db
 		redirect_to articles_path
 	end
 	#PUT /articles/:id
-	def update 
+	def update
 	end
 end
