@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 =begin
   get "/articles" index
   post "/articles" create
-  delete "/articles" delete
+  delete "/articles/:id" delete
   get "/articles:id" show
   get "/articles/new:id" edit
   patch "articles/:id" update

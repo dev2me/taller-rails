@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 	end
 	#POST /articles
 	def create
-		@article = Article.new(title: params[:article][:title], body: params[:article][:body])
+		@article = Article.new(article_params)
 		if @article.save
 			redirect_to @article
 		else
@@ -27,5 +27,12 @@ class ArticlesController < ApplicationController
 	end
 	#PUT /articles/:id
 	def update
+	end
+	#Private es una palabra reservada que determina que métodos son de tipo privado por lo que 
+	#todo lo que se encuentra debajo de esa palabra se considera como un método o propiedad privada
+	private 
+	def article_params
+		#Se hace un require del hash de articulos para despues especificar que campos serán permitidos
+		params.require(:article).permit(:title,:body)
 	end
 end
