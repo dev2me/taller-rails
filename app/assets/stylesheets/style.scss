@@ -36,7 +36,7 @@ a, a:visited {
 .no-margin {
 	margin: 0;
 }
-.field {
+.field, .top-space, .actions {
 	margin-top: 1em;
 }
 .form-control {
@@ -54,4 +54,7 @@ a, a:visited {
 }
 .top-space {
 	margin-top: 1em;
+}
+.text-left {
+	text-align: left;
 }
