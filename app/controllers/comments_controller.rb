@@ -2,36 +2,16 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
   before_action :set_article
   before_action :authenticate_user!
-  # GET /comments
-  # GET /comments.json
-  def index
-    @comments = Comment.all
-  end
-
-  # GET /comments/1
-  # GET /comments/1.json
-  def show
-  end
-
-  # GET /comments/new
-  def new
-    @comment = Comment.new
-  end
-
-  # GET /comments/1/edit
-  def edit
-  end
-
   # POST /comments
   # POST /comments.json
   def create
 
-    @comment = current_user.new(comment_params)
+    @comment = current_user.comments.new(comment_params)
     @comment.article = @article
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment.article, notice: 'Comment was successfully created.' }
-        format.json { render :show, status: :created, location: @comment }
+        format.html { redirect_to @comment.article, notice: 'Comentario creado satisfactoriamente.' }
+        format.json { render :show, status: :created, location: @comment.article }
       else
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -44,7 +24,7 @@ class CommentsController < ApplicationController
   def update
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to @comment.article, notice: 'Comment was successfully updated.' }
+        format.html { redirect_to @comment.article, notice: 'Comentario actualizado satisfactoriamente.' }
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
