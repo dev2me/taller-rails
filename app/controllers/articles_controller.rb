@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
 	#PUT /articles/:id
 	def update
 		if @article.update(article_params)
-			render_to @article
+			redirect_to @article
 		else
 			render :edit
 		end
@@ -50,6 +50,6 @@ class ArticlesController < ApplicationController
 	end 
 	def article_params
 		#Se hace un require del hash de articulos para despues especificar que campos serán permitidos
-		params.require(:article).permit(:title,:body)
+		params.require(:article).permit(:title, :body, :cover)
 	end
 end
